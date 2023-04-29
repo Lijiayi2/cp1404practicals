@@ -6,17 +6,18 @@ This is why we name our folders with no spaces or capitals, as valid module name
 
 from prac_06.car import Car
 
+
 def main():
     """Demo test code to show how to use car class."""
-    my_car = Car(180)
+    my_car = Car(180, "Car")
     my_car.drive(30)
-    print(f"Car has fuel: {my_car.fuel}")
-    print(my_car)
+    print(f"{my_car.name} has fuel: {my_car.fuel}")
+    print(f"{my_car}")
+    my_limo = Car(100, "Limo")
+    my_limo.add_fuel(20)
+    print(f"{my_limo.name} has fuel: {my_limo.fuel}")
+    my_limo.drive(115)
+    print(f"{my_limo}")
 
-
-limo = Car(fuel=100)
-limo.add_fuel(20)
-print(f"Fuel amount of {limo.name}: {limo.fuel}")
-distance_driven = limo.drive(115)
-print(f"Odometer after moving {distance_driven} km = {limo.odometer}")
+main()
 
